@@ -194,9 +194,9 @@ Analyzed Google Analytics, AdSense, YouTube, Instagram, and Facebook performance
 
 ## Connect
 
-- LinkedIn: [Add your LinkedIn URL here](https://www.linkedin.com/)
-- Portfolio: [Add your portfolio URL here](https://your-portfolio.com)
-- GitHub: [Add your GitHub URL here](https://github.com/YOUR_USERNAME)
+- LinkedIn: [Profile](https://www.linkedin.com/in/kaustavkalra/)
+- Portfolio: [Website](linkedin.com/in/kaustavkalra/)
+- GitHub: [Add your GitHub URL here](https://github.com/kaus-h)
 
 ---
 
