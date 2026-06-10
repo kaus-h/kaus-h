@@ -64,7 +64,7 @@ I enjoy building practical software that connects clean interfaces, reliable bac
 
 ## Featured Projects
 
-### PatientConnect360
+### [PatientConnect360](https://github.com/kaus-h/PatientConnect360)
 **Full-stack healthcare coordination platform**
 
 Industry-sponsored capstone platform for patients, caregivers, clinicians, and admins.
@@ -80,7 +80,7 @@ Industry-sponsored capstone platform for patients, caregivers, clinicians, and a
 
 ---
 
-### BeliefGuard
+### [BeliefGuard](https://github.com/kaus-h/BeliefGuard-Hackathon)
 **AI-assisted developer tooling for safer code generation**
 
 A TypeScript VS Code extension that reduces unsafe AI-generated code edits by grounding model output before workspace mutation.
@@ -96,7 +96,7 @@ A TypeScript VS Code extension that reduces unsafe AI-generated code edits by gr
 
 ---
 
-### HydraScan
+### [HydraScan](https://github.com/kaus-h/HydraScan)
 **On-device ML recovery intelligence iOS app**
 
 Privacy-first iOS recovery app that analyzes biomechanical movement using pose estimation and deterministic scoring.
@@ -112,7 +112,7 @@ Privacy-first iOS recovery app that analyzes biomechanical movement using pose e
 
 ---
 
-### RallyPoint
+### [RallyPoint](https://github.com/snesan821/hackathonrallypoint)
 **Swipeable civic discovery and action platform**
 
 A deployed civic engagement platform that helps users discover, understand, and act on local policy issues.
