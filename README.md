@@ -180,14 +180,13 @@ Analyzed Google Analytics, AdSense, YouTube, Instagram, and Facebook performance
 
 ## GitHub Stats
 
-> Replace `YOUR_USERNAME` with your actual GitHub username.
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
 </p>
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
 </p>
 
 ---
@@ -196,7 +195,7 @@ Analyzed Google Analytics, AdSense, YouTube, Instagram, and Facebook performance
 
 - LinkedIn: [Profile](https://www.linkedin.com/in/kaustavkalra/)
 - Portfolio: [Website](linkedin.com/in/kaustavkalra/)
-- GitHub: [Add your GitHub URL here](https://github.com/kaus-h)
+- GitHub: [Profile](https://github.com/kaus-h)
 
 ---
 
