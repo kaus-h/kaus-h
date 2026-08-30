@@ -6,19 +6,6 @@ I enjoy building practical software that connects clean interfaces, reliable bac
 
 ---
 
-## GitHub Stats
-
-
-<p align="left">
-  <img src="https://github-stats-extended.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
-</p
-
-<p align="left">
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
-</p>
-
----
-
 ## About Me
 
 - Computer Science graduate with a concentration in Software Engineering from Arizona State University
@@ -72,6 +59,19 @@ I enjoy building practical software that connects clean interfaces, reliable bac
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
 ![Zod](https://img.shields.io/badge/Zod-3068B7?style=for-the-badge)
 ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge)
+
+---
+
+## GitHub Stats
+
+
+<p align="left">
+  <img src="https://github-stats-extended.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
+</p
+
+<p align="left">
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
+</p>
 
 ---
 
