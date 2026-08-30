@@ -34,8 +34,6 @@ my work has moved across backend systems, developer tooling, computer vision, he
 <img src="https://img.shields.io/github/followers/kaus-h?style=for-the-badge&logo=github&label=followers&labelColor=050509&color=FF4FD8" alt="GitHub followers">
 <img src="https://img.shields.io/github/stars/kaus-h?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&logo=github&label=stars&labelColor=050509&color=63F58B" alt="GitHub stars">
 
-<sub>numbers, but make them pretty ♡ · #050509 / #FF4FD8 / #63F58B / #7DD3FC</sub>
-
 </div>
 
 <br>
