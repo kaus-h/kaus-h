@@ -61,6 +61,32 @@ class ReadmeContentTests(unittest.TestCase):
         for value in required:
             self.assertIn(value, self.text)
 
+    def test_activity_graph_uses_documented_linked_markdown_pattern(self):
+        self.assertIn(
+            "[![Kaustav's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kaus-h",
+            self.text,
+        )
+        self.assertIn(
+            "](https://github.com/ashutosh00710/github-readme-activity-graph)",
+            self.text,
+        )
+        self.assertNotIn(
+            '<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=kaus-h',
+            self.text,
+        )
+
+    def test_hero_centers_lowercase_identity_and_removes_tagline(self):
+        for name in ("hero-dark.svg", "hero-light.svg"):
+            hero = (ROOT / "assets" / name).read_text(encoding="utf-8")
+            with self.subTest(name=name):
+                self.assertIn('x="600"', hero)
+                self.assertIn('text-anchor="middle"', hero)
+                self.assertIn('>kaustav kalra</text>', hero)
+                self.assertIn('>software engineer · systems + design</text>', hero)
+                self.assertNotIn('building across the layers people see', hero)
+                self.assertNotIn("and the systems they shouldn't have to think about.", hero)
+                self.assertNotIn('>KAUSTAV KALRA</text>', hero)
+
     def test_readme_uses_black_pink_green_light_blue_palette(self):
         for color in ("050509", "FF4FD8", "63F58B", "7DD3FC"):
             self.assertIn(color, self.text)
