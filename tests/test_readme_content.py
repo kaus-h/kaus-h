@@ -37,8 +37,8 @@ class ReadmeContentTests(unittest.TestCase):
 
     def test_embeds_theme_aware_hero_and_flagship_cards(self):
         required_assets = [
-            "./assets/hero-dark.svg",
-            "./assets/hero-light.svg",
+            "./assets/hero-dark-v2.svg",
+            "./assets/hero-light-v2.svg",
             "./assets/projects/hydrascan-dark.svg",
             "./assets/projects/hydrascan-light.svg",
             "./assets/projects/beliefguard-dark.svg",
@@ -55,41 +55,43 @@ class ReadmeContentTests(unittest.TestCase):
             "github-stats-extended.vercel.app/api?username=kaus-h",
             "github-stats-extended.vercel.app/api/top-langs/?username=kaus-h",
             "streak-stats.demolab.com",
-            "github-readme-activity-graph.vercel.app/graph?username=kaus-h",
+            "./assets/activity-dark-v2.svg",
+            "./assets/activity-light-v2.svg",
             "img.shields.io/github/followers/kaus-h",
         ]
         for value in required:
             self.assertIn(value, self.text)
 
-    def test_activity_graph_uses_documented_linked_markdown_pattern(self):
-        self.assertIn(
-            "[![Kaustav's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kaus-h",
-            self.text,
-        )
-        self.assertIn(
-            "](https://github.com/ashutosh00710/github-readme-activity-graph)",
-            self.text,
-        )
-        self.assertNotIn(
-            '<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=kaus-h',
-            self.text,
-        )
+    def test_activity_graph_is_repo_owned_and_theme_aware(self):
+        self.assertIn("./assets/activity-dark-v2.svg", self.text)
+        self.assertIn("./assets/activity-light-v2.svg", self.text)
+        self.assertNotIn("github-readme-activity-graph.vercel.app", self.text)
 
     def test_hero_centers_lowercase_identity_and_removes_tagline(self):
-        for name in ("hero-dark.svg", "hero-light.svg"):
+        for name in ("hero-dark-v2.svg", "hero-light-v2.svg"):
             hero = (ROOT / "assets" / name).read_text(encoding="utf-8")
             with self.subTest(name=name):
                 self.assertIn('x="600"', hero)
                 self.assertIn('text-anchor="middle"', hero)
                 self.assertIn('>kaustav kalra</text>', hero)
                 self.assertIn('>software engineer · systems + design</text>', hero)
-                self.assertNotIn('building across the layers people see', hero)
+                self.assertNotIn("building across the layers people see", hero)
                 self.assertNotIn("and the systems they shouldn't have to think about.", hero)
-                self.assertNotIn('>KAUSTAV KALRA</text>', hero)
+                self.assertNotIn(">KAUSTAV KALRA</text>", hero)
 
     def test_readme_uses_black_pink_green_light_blue_palette(self):
         for color in ("050509", "FF4FD8", "63F58B", "7DD3FC"):
             self.assertIn(color, self.text)
+
+    def test_hero_uses_versioned_asset_urls_to_bust_github_image_cache(self):
+        self.assertIn("./assets/hero-dark-v2.svg", self.text)
+        self.assertIn("./assets/hero-light-v2.svg", self.text)
+        self.assertNotIn('srcset="./assets/hero-dark.svg"', self.text)
+        self.assertNotIn('srcset="./assets/hero-light.svg"', self.text)
+
+    def test_activity_graph_has_no_external_runtime_dependency(self):
+        self.assertNotIn("github-readme-activity-graph.vercel.app", self.text)
+        self.assertIn("recent public activity", self.text.lower())
 
     def test_all_local_svg_references_exist(self):
         refs = set(re.findall(r'(?:src|srcset)="(\./assets/[^"]+\.svg)"', self.text))
