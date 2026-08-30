@@ -17,8 +17,6 @@ my work has moved across backend systems, developer tooling, computer vision, he
 | reliability | visual language | validation |
 | performance | workflow design | testing |
 
-<sub>currently: making the invisible parts feel intentional ✦</sub>
-
 ---
 
 ## engineering telemetry
