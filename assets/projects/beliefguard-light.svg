@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">BeliefGuard — repository-aware AI execution control</title><desc id="desc">BeliefGuard project card showing a repository belief pipeline and deterministic action gate.</desc>
+<defs><pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#E2E8F0"/></pattern><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4B5563"/></marker></defs>
+<style>
+.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}.mono{font-family:SFMono-Regular,Consolas,"Liberation Mono",monospace;letter-spacing:1.1px}.title{font-size:34px;font-weight:760;letter-spacing:-.7px}.kicker{font-size:11px;font-weight:800}.body{font-size:16px;font-weight:520}.metric{font-size:34px;font-weight:760}.mlabel{font-size:10px;font-weight:800}.small{font-size:11px;font-weight:700}.node{font-size:10px;font-weight:800}
+</style><rect width="1200" height="420" rx="18" fill="#F7FAFC"/><rect width="1200" height="420" rx="18" fill="url(#grid)" opacity=".58"/><rect x="1" y="1" width="1198" height="418" rx="17" fill="none" stroke="#D7DEE8"/><rect x="28" y="28" width="1144" height="364" rx="16" fill="#FFFFFF" stroke="#D7DEE8"/>
+<text x="60" y="72" class="mono kicker" fill="#0284C7">02 / 03 · AI EXECUTION CONTROL / VS CODE</text>
+<text x="60" y="120" class="sans title" fill="#09090B">BeliefGuard</text>
+<text x="60" y="153" class="sans body" fill="#4B5563">repository-aware control layer for AI coding agents before workspace mutation</text>
+<path d="M60 181H1140" stroke="#D7DEE8"/>
+<rect x="72" y="218" width="116" height="58" rx="12" fill="#F1F5F9" stroke="#0284C7"/>
+<text x="130.0" y="253" class="mono node" text-anchor="middle" fill="#09090B">TASK</text><path d="M188 247H214" stroke="#4B5563" marker-end="url(#arrow)"/><rect x="224" y="218" width="116" height="58" rx="12" fill="#F1F5F9" stroke="#0284C7"/>
+<text x="282.0" y="253" class="mono node" text-anchor="middle" fill="#09090B">PLAN</text><path d="M340 247H366" stroke="#4B5563" marker-end="url(#arrow)"/><rect x="376" y="218" width="132" height="58" rx="12" fill="#F1F5F9" stroke="#0284C7"/>
+<text x="442.0" y="253" class="mono node" text-anchor="middle" fill="#09090B">BELIEFS</text><path d="M508 247H534" stroke="#4B5563" marker-end="url(#arrow)"/><rect x="544" y="218" width="146" height="58" rx="12" fill="#F1F5F9" stroke="#0284C7"/>
+<text x="617.0" y="253" class="mono node" text-anchor="middle" fill="#09090B">EVIDENCE</text><path d="M690 247H716" stroke="#4B5563" marker-end="url(#arrow)"/><rect x="726" y="218" width="154" height="58" rx="12" fill="#F1F5F9" stroke="#C026D3"/>
+<text x="803.0" y="253" class="mono node" text-anchor="middle" fill="#09090B">RISK GATE</text><rect x="916" y="205" width="162" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/><circle cx="932" cy="220" r="4" fill="#0284C7"/><text x="946" y="224" class="mono small" fill="#09090B">INSPECT</text><rect x="916" y="247" width="162" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/><circle cx="932" cy="262" r="4" fill="#C026D3"/><text x="946" y="266" class="mono small" fill="#09090B">ASK</text><rect x="916" y="289" width="162" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/><circle cx="932" cy="304" r="4" fill="#16A34A"/><text x="946" y="308" class="mono small" fill="#09090B">PROCEED</text><rect x="916" y="331" width="162" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/><circle cx="932" cy="346" r="4" fill="#C026D3"/><text x="946" y="350" class="mono small" fill="#09090B">BLOCK</text><path d="M880 247H906" stroke="#4B5563" marker-end="url(#arrow)"/>
+<rect x="60" y="322" width="770" height="34" rx="17" fill="#F1F5F9" stroke="#D7DEE8"/>
+<text x="78" y="344" class="mono small" fill="#09090B">TYPESCRIPT · VS CODE API · ZOD · VITEST · LLM APIS</text>
+<text x="1091" y="359" class="mono small" text-anchor="end" fill="#4B5563">evidence first, edits second ✦</text>
+</svg>
