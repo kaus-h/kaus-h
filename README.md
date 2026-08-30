@@ -1,14 +1,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
-  <img src="./assets/hero-light.svg" alt="Kaustav Kalra — software engineer focused on systems and design" width="100%">
+  <img src="./assets/hero-light.svg" alt="kaustav kalra — software engineer focused on systems and design" width="100%">
 </picture>
 
 <br>
 
 i like building software where **technical depth and product design are treated as the same problem**.
 
-my work has moved across backend systems, developer tooling, computer vision, healthcare software, AI-assisted workflows, and mobile products, but the underlying pattern lies between what a system does internally and what using it actually feels like.
+my work has moved across backend systems, developer tooling, computer vision, healthcare software, AI-assisted workflows, and mobile products — usually somewhere between what a system does internally and what using it actually feels like.
 
 | systems | product | signal |
 | --- | --- | --- |
@@ -17,6 +17,7 @@ my work has moved across backend systems, developer tooling, computer vision, he
 | reliability | visual language | validation |
 | performance | workflow design | testing |
 
+<sub>currently: making the invisible parts feel intentional ✦</sub>
 
 ---
 
@@ -33,6 +34,8 @@ my work has moved across backend systems, developer tooling, computer vision, he
 <img src="https://img.shields.io/github/followers/kaus-h?style=for-the-badge&logo=github&label=followers&labelColor=050509&color=FF4FD8" alt="GitHub followers">
 <img src="https://img.shields.io/github/stars/kaus-h?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&logo=github&label=stars&labelColor=050509&color=63F58B" alt="GitHub stars">
 
+<sub>numbers, but make them pretty ♡ · #050509 / #FF4FD8 / #63F58B / #7DD3FC</sub>
+
 </div>
 
 <br>
@@ -46,9 +49,7 @@ my work has moved across backend systems, developer tooling, computer vision, he
   <img width="72%" src="https://streak-stats.demolab.com?user=kaus-h&hide_border=true&background=050509&stroke=202634&ring=FF4FD8&fire=63F58B&currStreakNum=F6FAFF&sideNums=F6FAFF&currStreakLabel=7DD3FC&sideLabels=A7B0C0&dates=A7B0C0" alt="Kaustav's GitHub contribution streak">
 </p>
 
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=kaus-h&bg_color=050509&color=7DD3FC&line=FF4FD8&point=63F58B&area=true&area_color=7DD3FC&hide_border=true" alt="Kaustav's recent GitHub activity graph">
-</p>
+[![Kaustav's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kaus-h&bg_color=050509&color=7DD3FC&title_color=FF4FD8&line=FF4FD8&point=63F58B&area=true&area_color=7DD3FC&hide_border=true&radius=16&height=300&days=31&custom_title=recent%20activity)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 ---
 

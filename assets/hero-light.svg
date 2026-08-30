@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
-<title id="title">Kaustav Kalra — software engineer, systems and design</title>
-<desc id="desc">A high-fidelity profile banner with systems telemetry styling, pink, green, and light-blue accents, and playful status details.</desc>
+<title id="title">kaustav kalra — software engineer, systems and design</title>
+<desc id="desc">Centered profile banner with a black, pink, green, and light-blue systems-and-design visual language.</desc>
 <defs>
   <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
     <path d="M36 0H0V36" fill="none" stroke="#E2E8F0" stroke-width="1"/>
@@ -10,46 +10,41 @@
 <style>
 .sans { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
 .mono { font-family:SFMono-Regular,Consolas,"Liberation Mono",monospace; letter-spacing:1.25px; }
-.name { font-size:54px; font-weight:760; letter-spacing:-1.8px; }
+.name { font-size:58px; font-weight:760; letter-spacing:-2px; }
 .headline { font-size:24px; font-weight:600; }
-.body { font-size:17px; font-weight:480; }
 .tiny { font-size:11px; font-weight:700; }
-.stack { font-size:11px; font-weight:700; }
+.stack { font-size:11px; font-weight:750; }
 </style>
 <g clip-path="url(#clip)">
   <rect width="1200" height="340" fill="#F7FAFC"/>
   <rect width="1200" height="340" fill="url(#grid)" opacity="0.8"/>
   <rect x="22" y="22" width="1156" height="296" rx="16" fill="#FFFFFF" stroke="#D7DEE8"/>
   <path d="M22 95H1178" stroke="#D7DEE8"/>
-  <path d="M735 95V318" stroke="#D7DEE8"/>
 
   <text x="58" y="62" class="mono tiny" fill="#4B5563">PROFILE / 2026</text>
   <circle cx="1036" cy="55" r="4.5" fill="#16A34A"/>
   <text x="1050" y="60" class="mono tiny" fill="#4B5563">PHX / AZ</text>
 
-  <text x="58" y="160" class="sans name" fill="#09090B">KAUSTAV KALRA</text>
-  <text x="58" y="201" class="sans headline" fill="#0284C7">software engineer · systems + design</text>
-  <text x="58" y="244" class="sans body" fill="#09090B">building across the layers people see</text>
-  <text x="58" y="270" class="sans body" fill="#4B5563">and the systems they shouldn't have to think about.</text>
+  <text x="600" y="165" text-anchor="middle" class="sans name" fill="#09090B">kaustav kalra</text>
+  <text x="600" y="207" text-anchor="middle" class="sans headline" fill="#0284C7">software engineer · systems + design</text>
 
-  <rect x="58" y="289" width="112" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/>
-  <circle cx="76" cy="304" r="4" fill="#C026D3"/>
-  <text x="88" y="308" class="mono tiny" fill="#09090B">BUILDING</text>
-  <rect x="181" y="289" width="213" height="30" rx="15" fill="#F1F5F9" stroke="#D7DEE8"/>
-  <text x="198" y="308" class="mono tiny" fill="#4B5563">CS · SOFTWARE ENGINEERING</text>
+  <g class="mono stack" text-anchor="middle">
+    <circle cx="337" cy="253" r="4.5" fill="#0284C7"/><text x="390" y="258" fill="#09090B">TYPESCRIPT</text>
+    <circle cx="483" cy="253" r="4.5" fill="#C026D3"/><text x="527" y="258" fill="#09090B">PYTHON</text>
+    <circle cx="590" cy="253" r="4.5" fill="#16A34A"/><text x="622" y="258" fill="#09090B">C++</text>
+    <circle cx="676" cy="253" r="4.5" fill="#C026D3"/><text x="716" y="258" fill="#09090B">SWIFT</text>
+    <circle cx="790" cy="253" r="4.5" fill="#0284C7"/><text x="840" y="258" fill="#09090B">POSTGRES</text>
+  </g>
 
-  <text x="777" y="132" class="mono tiny" fill="#4B5563">CURRENT TOOLBOX</text>
-  <circle cx="777" cy="163" r="5" fill="#0284C7"/><text x="796" y="168" class="mono stack" fill="#09090B">TYPESCRIPT</text>
-  <circle cx="777" cy="194" r="5" fill="#C026D3"/><text x="796" y="199" class="mono stack" fill="#09090B">PYTHON</text>
-  <circle cx="777" cy="225" r="5" fill="#16A34A"/><text x="796" y="230" class="mono stack" fill="#09090B">C++</text>
-  <circle cx="947" cy="163" r="5" fill="#C026D3"/><text x="966" y="168" class="mono stack" fill="#09090B">SWIFT</text>
-  <circle cx="947" cy="194" r="5" fill="#0284C7"/><text x="966" y="199" class="mono stack" fill="#09090B">POSTGRES</text>
+  <rect x="393" y="281" width="112" height="28" rx="14" fill="#F1F5F9" stroke="#D7DEE8"/>
+  <circle cx="411" cy="295" r="4" fill="#C026D3"/>
+  <text x="423" y="299" class="mono tiny" fill="#09090B">BUILDING</text>
+  <rect x="518" y="281" width="213" height="28" rx="14" fill="#F1F5F9" stroke="#D7DEE8"/>
+  <text x="624.5" y="299" text-anchor="middle" class="mono tiny" fill="#4B5563">CS · SOFTWARE ENGINEERING</text>
 
-  <path d="M1048 248 l7 -15 l7 15 l15 7 l-15 7 l-7 15 l-7 -15 l-15 -7 z" fill="#C026D3" opacity="0.95"/>
-  <circle cx="1106" cy="272" r="3" fill="#0284C7"/>
-  <circle cx="1127" cy="248" r="2" fill="#16A34A"/>
-  <path d="M764 289H1128" stroke="#D7DEE8" stroke-dasharray="3 8"/>
-  <text x="777" y="307" class="mono tiny" fill="#4B5563">systems that feel considered ✦</text>
+  <path d="M760 287 l6 -12 l6 12 l12 6 l-12 6 l-6 12 l-6 -12 l-12 -6 z" fill="#C026D3" opacity="0.95"/>
+  <circle cx="800" cy="300" r="3" fill="#0284C7"/>
+  <circle cx="820" cy="286" r="2.5" fill="#16A34A"/>
 </g>
 <rect x="1" y="1" width="1198" height="338" rx="17" fill="none" stroke="#D7DEE8"/>
 </svg>
