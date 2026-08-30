@@ -6,6 +6,19 @@ I enjoy building practical software that connects clean interfaces, reliable bac
 
 ---
 
+## GitHub Stats
+
+
+<p align="left">
+  <img src="https://github-stats-extended.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
+</p
+
+<p align="left">
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
+</p>
+
+---
+
 ## About Me
 
 - Computer Science graduate with a concentration in Software Engineering from Arizona State University
@@ -175,19 +188,6 @@ Researched music emotion classification and built a Keras/Spotify API machine le
 
 ### Social Media Marketing Intern, IndianRaga
 Analyzed Google Analytics, AdSense, YouTube, Instagram, and Facebook performance data to support growth and content optimization.
-
----
-
-## GitHub Stats
-
-
-<p align="left">
-  <img src="https://github-stats-extended.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
-</p
-
-<p align="left">
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
-</p>
 
 ---
 
