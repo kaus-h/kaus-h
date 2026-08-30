@@ -182,11 +182,11 @@ Analyzed Google Analytics, AdSense, YouTube, Instagram, and Facebook performance
 
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
-</p>
+  <img src="https://github-stats-extended.vercel.app/api?username=kaus-h&show_icons=true&theme=tokyonight" alt="GitHub stats" />
+</p
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kaus-h&layout=compact&theme=tokyonight" alt="Top languages" />
 </p>
 
 ---
