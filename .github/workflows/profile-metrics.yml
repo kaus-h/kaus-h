@@ -35,6 +35,7 @@ jobs:
           import os
           import urllib.request
           from collections import Counter
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
 
           token = os.environ["GITHUB_TOKEN"]
@@ -65,6 +66,25 @@ jobs:
           )
           top_language = languages.most_common(1)[0][0] if languages else "—"
 
+          today = datetime.now(timezone.utc).date()
+          start = today - timedelta(days=30)
+          activity = {
+              (start + timedelta(days=offset)).isoformat(): 0
+              for offset in range(31)
+          }
+          for event in events:
+              created = event.get("created_at")
+              if not created:
+                  continue
+              event_day = datetime.fromisoformat(created.replace("Z", "+00:00")).date()
+              key = event_day.isoformat()
+              if key not in activity:
+                  continue
+              if event.get("type") == "PushEvent":
+                  activity[key] += max(1, len(event.get("payload", {}).get("commits", [])))
+              else:
+                  activity[key] += 1
+
           metrics = {
               "public_repositories": user.get("public_repos"),
               "followers": user.get("followers"),
@@ -72,6 +92,7 @@ jobs:
               "forks_received": sum(repo.get("forks_count", 0) for repo in repos if not repo.get("fork")),
               "recent_commits": recent_commits,
               "top_language": top_language,
+              "activity": activity,
           }
           Path("/tmp/github-live.json").write_text(json.dumps(metrics), encoding="utf-8")
           PY
@@ -79,16 +100,18 @@ jobs:
       - name: run profile tests
         run: python -m unittest discover -s tests -v
 
-      - name: render telemetry
+      - name: render telemetry and activity
         run: |
           python scripts/generate_profile.py --theme dark --github-json /tmp/github-live.json --output assets/telemetry-dark.svg
           python scripts/generate_profile.py --theme light --github-json /tmp/github-live.json --output assets/telemetry-light.svg
+          python scripts/generate_profile.py --kind activity --theme dark --github-json /tmp/github-live.json --output assets/activity-dark-v2.svg
+          python scripts/generate_profile.py --kind activity --theme light --github-json /tmp/github-live.json --output assets/activity-light-v2.svg
 
       - name: commit telemetry when changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/telemetry-dark.svg assets/telemetry-light.svg
+          git add assets/telemetry-dark.svg assets/telemetry-light.svg assets/activity-dark-v2.svg assets/activity-light-v2.svg
           if git diff --quiet --cached; then
             echo "telemetry unchanged"
           else
