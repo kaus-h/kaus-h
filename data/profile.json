@@ -1,0 +1,43 @@
+{
+  "identity": {
+    "name": "Kaustav Kalra",
+    "location": "PHX / AZ",
+    "education": "Arizona State University · Computer Science · Software Engineering",
+    "headline": "software engineer · systems + design"
+  },
+  "hero_stack": ["TypeScript", "Python", "C++", "Swift", "PostgreSQL"],
+  "focus": [
+    "backend systems",
+    "developer tooling",
+    "computer vision",
+    "observability",
+    "healthcare software",
+    "product engineering"
+  ],
+  "projects": {
+    "hydrascan": {
+      "name": "HydraScan",
+      "pose_hz": 120,
+      "landmarks": 33,
+      "metrics": "50+",
+      "stack": ["Swift", "SwiftUI", "QuickPose", "SIMD3", "Supabase"]
+    },
+    "beliefguard": {
+      "name": "BeliefGuard",
+      "decisions": ["PROCEED", "INSPECT_MORE", "ASK_USER", "BLOCK"],
+      "stack": ["TypeScript", "VS Code API", "Zod", "Vitest", "LLM APIs"]
+    },
+    "patientconnect360": {
+      "name": "PatientConnect360",
+      "query_improvement": "~95%",
+      "stack": ["React", "Vite", "Node.js", "Express", "Prisma", "PostgreSQL", "Recharts"]
+    }
+  },
+  "stack": {
+    "languages": ["TypeScript", "JavaScript", "Python", "Java", "C++", "Swift", "SQL"],
+    "product": ["React", "Next.js", "Vite", "Tailwind CSS", "SwiftUI"],
+    "systems_data": ["Node.js", "Express", "REST APIs", "PostgreSQL", "MySQL", "Prisma", "Redis"],
+    "intelligence": ["LLM APIs", "Claude", "Gemini", "Keras", "scikit-learn", "Pandas", "NumPy"],
+    "quality_workflow": ["Git", "GitHub", "VS Code", "Vitest", "Zod", "JUnit"]
+  }
+}
