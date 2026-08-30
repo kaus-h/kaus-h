@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
-  <img src="./assets/hero-light.svg" alt="kaustav kalra — software engineer focused on systems and design" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light-v2.svg">
+  <img src="./assets/hero-light-v2.svg" alt="kaustav kalra — software engineer focused on systems and design" width="100%">
 </picture>
 
 <br>
@@ -47,7 +47,11 @@ my work has moved across backend systems, developer tooling, computer vision, he
   <img width="72%" src="https://streak-stats.demolab.com?user=kaus-h&hide_border=true&background=050509&stroke=202634&ring=FF4FD8&fire=63F58B&currStreakNum=F6FAFF&sideNums=F6FAFF&currStreakLabel=7DD3FC&sideLabels=A7B0C0&dates=A7B0C0" alt="Kaustav's GitHub contribution streak">
 </p>
 
-[![Kaustav's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kaus-h&bg_color=050509&color=7DD3FC&title_color=FF4FD8&line=FF4FD8&point=63F58B&area=true&area_color=7DD3FC&hide_border=true&radius=16&height=300&days=31&custom_title=recent%20activity)](https://github.com/ashutosh00710/github-readme-activity-graph)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/activity-dark-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/activity-light-v2.svg">
+  <img src="./assets/activity-light-v2.svg" alt="Recent public activity over the last 31 days" width="100%">
+</picture>
 
 ---
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">Recent public activity</title>
+<desc id="desc">Repo-owned 31-day GitHub activity graph. Live values are refreshed by GitHub Actions.</desc>
+<style>
+.mono { font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace; letter-spacing: 1px; }
+.kicker { font-size: 13px; font-weight: 800; }
+.axis { font-size: 10px; font-weight: 700; }
+.stat { font-size: 11px; font-weight: 800; }
+</style>
+<rect width="1200" height="300" rx="18" fill="#050509"/>
+<rect x="1" y="1" width="1198" height="298" rx="17" fill="none" stroke="#202634"/>
+<text x="70" y="48" class="mono kicker" fill="#FF4FD8">RECENT PUBLIC ACTIVITY / 31 DAYS</text>
+<circle cx="1017" cy="43" r="4.5" fill="#63F58B"/>
+<text x="1031" y="48" class="mono stat" fill="#A7B0C0">AUTO-REFRESH</text>
+<path d="M80 96H1120M80 141H1120M80 187H1120M80 232H1120" stroke="#202634" stroke-dasharray="2 8"/>
+<polyline points="80,232 288,232 496,232 704,232 912,232 1120,232" fill="none" stroke="#FF4FD8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="80" cy="232" r="4" fill="#63F58B"/><circle cx="288" cy="232" r="4" fill="#63F58B"/><circle cx="496" cy="232" r="4" fill="#63F58B"/><circle cx="704" cy="232" r="4" fill="#63F58B"/><circle cx="912" cy="232" r="4" fill="#63F58B"/><circle cx="1120" cy="232" r="4" fill="#63F58B"/>
+<text x="80" y="264" class="mono axis" fill="#A7B0C0">loading live activity…</text>
+<text x="80" y="286" class="mono stat" fill="#7DD3FC">REPO-OWNED</text>
+<text x="1120" y="286" text-anchor="end" class="mono stat" fill="#A7B0C0">no external renderer · no broken image ♡</text>
+<path d="M1090 44 l5 -10 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 z" fill="#7DD3FC" opacity="0.9"/>
+</svg>

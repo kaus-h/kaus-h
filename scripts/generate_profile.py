@@ -136,17 +136,102 @@ def render_telemetry(profile: dict[str, Any], theme: str, live_metrics: dict[str
 </svg>'''
 
 
+def render_activity(activity: dict[str, Any], theme: str) -> str:
+    """Render a repo-owned 31-day public activity graph as SVG."""
+    if theme not in PALETTES:
+        raise ValueError(f"unsupported theme: {theme}")
+
+    p = PALETTES[theme]
+    items = sorted((str(day), max(0, int(count or 0))) for day, count in activity.items())[-31:]
+    if not items:
+        items = [("no-data", 0)]
+
+    left, right = 80.0, 1120.0
+    top, bottom = 96.0, 232.0
+    chart_height = bottom - top
+    peak_scale = max(1, max(count for _, count in items))
+    step = (right - left) / max(1, len(items) - 1)
+
+    points: list[tuple[float, float, str, int]] = []
+    circles: list[str] = []
+    for i, (day, count) in enumerate(items):
+        x = left + step * i
+        y = bottom - (count / peak_scale) * chart_height
+        points.append((x, y, day, count))
+        circles.append(
+            f'<circle cx="{x:.2f}" cy="{y:.2f}" r="3.5" fill="{p["green"]}" '
+            f'stroke="{p["bg"]}" stroke-width="1.5"><title>{escape(day)}: {count}</title></circle>'
+        )
+
+    polyline = " ".join(f"{x:.2f},{y:.2f}" for x, y, _, _ in points)
+    area_points = f"{points[0][0]:.2f},{bottom:.2f} {polyline} {points[-1][0]:.2f},{bottom:.2f}"
+
+    grid: list[str] = []
+    for i in range(4):
+        y = top + (chart_height / 3) * i
+        grid.append(
+            f'<path d="M{left:.0f} {y:.2f}H{right:.0f}" stroke="{p["border"]}" stroke-dasharray="2 8"/>'
+        )
+
+    label_indexes = sorted({0, len(items) // 4, len(items) // 2, (len(items) * 3) // 4, len(items) - 1})
+    labels: list[str] = []
+    for idx in label_indexes:
+        x, _, day, _ = points[idx]
+        short = day[5:] if len(day) >= 10 else day
+        labels.append(
+            f'<text x="{x:.2f}" y="264" text-anchor="middle" class="mono axis" fill="{p["muted"]}">{escape(short)}</text>'
+        )
+
+    total = sum(count for _, count in items)
+    active_days = sum(1 for _, count in items if count)
+    peak = max(count for _, count in items)
+    first_day = items[0][0]
+    last_day = items[-1][0]
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">Recent public activity</title>
+<desc id="desc">Repo-owned GitHub activity graph from {escape(first_day)} through {escape(last_day)}.</desc>
+<style>
+.sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
+.mono {{ font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace; letter-spacing: 1px; }}
+.kicker {{ font-size: 13px; font-weight: 800; }}
+.axis {{ font-size: 10px; font-weight: 700; }}
+.stat {{ font-size: 11px; font-weight: 800; }}
+</style>
+<rect width="1200" height="300" rx="18" fill="{p['bg']}"/>
+<rect x="1" y="1" width="1198" height="298" rx="17" fill="none" stroke="{p['border']}"/>
+<text x="70" y="48" class="mono kicker" fill="{p['pink']}">RECENT PUBLIC ACTIVITY / 31 DAYS</text>
+<circle cx="1017" cy="43" r="4.5" fill="{p['green']}"/>
+<text x="1031" y="48" class="mono stat" fill="{p['muted']}">REPO-OWNED SVG</text>
+{''.join(grid)}
+<polygon points="{area_points}" fill="{p['blue']}" opacity="0.12"/>
+<polyline points="{polyline}" fill="none" stroke="{p['pink']}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+{''.join(circles)}
+{''.join(labels)}
+<text x="80" y="286" class="mono stat" fill="{p['blue']}">TOTAL {total}</text>
+<text x="190" y="286" class="mono stat" fill="{p['green']}">ACTIVE DAYS {active_days}</text>
+<text x="350" y="286" class="mono stat" fill="{p['pink']}">PEAK {peak}</text>
+<text x="1120" y="286" text-anchor="end" class="mono stat" fill="{p['muted']}">no external renderer · no sad broken image ♡</text>
+<path d="M1090 44 l5 -10 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 z" fill="{p['blue']}" opacity="0.9"/>
+</svg>'''
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate GitHub profile telemetry SVG")
+    parser = argparse.ArgumentParser(description="Generate GitHub profile SVG assets")
     parser.add_argument("--profile", type=Path, default=Path("data/profile.json"))
     parser.add_argument("--theme", choices=sorted(PALETTES), required=True)
+    parser.add_argument("--kind", choices=("telemetry", "activity"), default="telemetry")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--github-json", type=Path)
     args = parser.parse_args()
 
     profile = load_profile(args.profile)
     live_metrics = load_profile(args.github_json) if args.github_json else None
-    svg = render_telemetry(profile, args.theme, live_metrics)
+    if args.kind == "activity":
+        activity = (live_metrics or {}).get("activity", {})
+        svg = render_activity(activity, args.theme)
+    else:
+        svg = render_telemetry(profile, args.theme, live_metrics)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(svg, encoding="utf-8")
 
