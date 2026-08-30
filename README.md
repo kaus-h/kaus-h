@@ -8,7 +8,7 @@
 
 i like building software where **technical depth and product design are treated as the same problem**.
 
-my work has moved across backend systems, developer tooling, computer vision, healthcare software, AI-assisted workflows, and mobile products — usually somewhere between what a system does internally and what using it actually feels like.
+my work has moved across backend systems, developer tooling, computer vision, healthcare software, AI-assisted workflows, and mobile products, but the underlying pattern lies between what a system does internally and what using it actually feels like.
 
 | systems | product | signal |
 | --- | --- | --- |
